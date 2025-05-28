@@ -1,6 +1,4 @@
-# TaskChai Framework
-
-![TaskChai Logo](./TaskChai.png)
+<p align="center"><img src="./TaskChai.png" width="280px" alt="TaskChai Framework" /></p>
 
 TaskChai is a lightweight but slightly opinionated framework for defining and running multi-step workflows. It allows you to create specialized tasks and chain them together to accomplish complex objectives.
 
