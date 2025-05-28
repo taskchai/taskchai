@@ -6,25 +6,25 @@ TaskChai is a lightweight but slightly opinionated framework for defining and ru
 
 The framework is built around the idea of **Tasks**.
 
-*   **Tasks**: Tasks define a unit of work that can be executed. They can be chained together to create complex workflows. The framework demonstrates how to define a collection of tasks (a "mission") and run it.
+A `Task` defines a unit of work that can be executed. They can be chained together to create complex workflows. Here's how to define a collection of tasks and run it:
 
-    *   Example Task Definition (conceptual):
-        ```typescript
 
-        // Example of a simple task with a prompt
-        const getGardeningAdvice = T("You are a gardening expert. Suggest a watering schedule for tomatoes in a sunny location.");
+  ```typescript
 
-        // Example of a task executing a function
-        const getWeatherReport = T(() => fetchWeatherForLocation("my_zip_code"));
+  // Example of a simple task with a prompt
+  const getGardeningAdvice = T("You are a gardening expert. Suggest a watering schedule for tomatoes in a sunny location.");
 
-        // Example of chaining tasks
-        const complexGardeningPlan = getWeatherReport
-          .then(weatherData => T(`Based on this weather: ${JSON.stringify(weatherData)}, advise on tomato care.`))
-          .then(gardeningAdvice => T(`Format this advice for a beginner: ${gardeningAdvice}`));
+  // Example of a task executing a function
+  const getWeatherReport = T(() => fetchWeatherForLocation("my_zip_code"));
 
-        // To run a task:
-        const result = complexGardeningPlan.run();
-        ```
+  // Example of chaining tasks
+  const complexGardeningPlan = getWeatherReport
+    .then(weatherData => T(`Based on this weather: ${JSON.stringify(weatherData)}, advise on tomato care.`))
+    .then(gardeningAdvice => T(`Format this advice for a beginner: ${gardeningAdvice}`));
+
+  // To run a task:
+  const result = complexGardeningPlan.run();
+  ```
 
 ## Advanced Task Configuration
 
