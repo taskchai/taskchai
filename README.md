@@ -23,7 +23,7 @@ A `Task` defines a unit of work that can be executed. They can be chained togeth
     .then(gardeningAdvice => T(`Format this advice for a beginner: ${gardeningAdvice}`));
 
   // To run a task:
-  const result = complexGardeningPlan.run();
+  const result = await complexGardeningPlan.run();
   ```
 
 ## Advanced Task Configuration
